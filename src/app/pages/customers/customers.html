@@ -1,0 +1,43 @@
+  <div class="row">
+    <div class="col-md-6"
+         ba-panel
+         ba-panel-title="Message Modals"
+         ba-panel-class="with-scroll">
+      <div class="modal-buttons same-width clearfix">
+        <button type="button" class="btn btn-success" data-toggle="modal" ng-click="open('app/pages/customers/modals/addUserModal.html', 'sm')">
+          Add New Customer
+        </button>
+        <button type="button" class="btn btn-info" data-toggle="modal" ng-click="open('app/pages/customers/modals/infoModal.html', 'md')">Export Customers</button>
+        <button type="button" class="btn btn-warning" data-toggle="modal" ng-click="open('app/pages/customers/modals/warningModal.html', 'lg')">
+          Synchronize
+        </button>
+        <button type="button" class="btn btn-danger" data-toggle="modal" ng-click="open('app/pages/customers/modals/dangerModal.html')">
+          Import Customers
+        </button>
+      </div>
+    </div>
+    <div class="col-md-6"
+         ba-panel
+         ba-panel-title="Notifications"
+         ba-panel-class="with-scroll">
+      <div ng-include="'app/pages/customers/notifications/notifications.html'"></div>
+    </div>
+  </div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div ba-panel ba-panel-class="with-scroll horizontal-tabs tabs-panel">
+			<uib-tabset active="$tabSetStatus.activeTab">
+				<uib-tab heading="All">
+					
+				</uib-tab>
+				<uib-tab heading="Inactive Products">
+					
+				</uib-tab>
+				<uib-tab ng-click="clicked()" heading="+">
+					
+				</uib-tab>
+			</uib-tabset>
+		</div>
+	</div>
+</div>

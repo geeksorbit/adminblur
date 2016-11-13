@@ -9,13 +9,28 @@
     'ui.router',
 
     'BlurAdmin.pages.dashboard',
+    'BlurAdmin.pages.inventorymanagement',
+	'BlurAdmin.pages.salesorders',
+	'BlurAdmin.pages.customers',
+	'BlurAdmin.pages.contactmanagement',
+	'BlurAdmin.pages.stockcontrol',
+	'BlurAdmin.pages.promote',
+	'BlurAdmin.pages.analytics',
+	'BlurAdmin.pages.intelligencereports',
+	'BlurAdmin.pages.bugreports',
+	'BlurAdmin.pages.promomanagement',
+	'BlurAdmin.pages.appmanagement',
+	'BlurAdmin.pages.settings',
+    'BlurAdmin.pages.helpguide',
+    'BlurAdmin.pages.profile',
+	'BlurAdmin.pages.testpage',
+	
     'BlurAdmin.pages.ui',
     'BlurAdmin.pages.components',
     'BlurAdmin.pages.form',
     'BlurAdmin.pages.tables',
     'BlurAdmin.pages.charts',
     'BlurAdmin.pages.maps',
-    'BlurAdmin.pages.profile',
   ])
       .config(routeConfig);
 

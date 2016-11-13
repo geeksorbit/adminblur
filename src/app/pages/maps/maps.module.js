@@ -18,7 +18,7 @@
           title: 'Maps',
           sidebarMeta: {
             icon: 'ion-ios-location-outline',
-            order: 500,
+            order: 2500,
           },
         })
         .state('maps.gmap', {

@@ -5,12 +5,13 @@
               ng-model="smartTablePageSize" ng-options="i for i in [5,10,15,20,25]">
       </select>
     </label>
+	<button type="button" ng-click="loadTable()"  class="btn btn-primary btn-block">Load From Firebase</button>
   </div>
   <table class="table" st-table="smartTableData">
     <thead>
     <tr class="sortable ">
       <th class="table-id" st-sort="id" st-sort-default="true">#</th>
-      <th st-sort="firstName">First Name</th>
+      <th st-sort="firstName">First Name <i class="fa fa-filter" aria-hidden="true"></i></th>
       <th st-sort="lastName">Last Name</th>
       <th st-sort="username">Username</th>
       <th st-sort="email">Email</th>
@@ -18,7 +19,7 @@
     </tr>
     <tr>
       <th></th>
-      <th><input st-search="firstName" placeholder="Search First Name" class="input-sm form-control search-input"
+      <th><input st-search="" placeholder="Search First Name" class="input-sm form-control search-input"
                  type="search"/></th>
       <th><input st-search="lastName" placeholder="Search Last Name" class="input-sm form-control search-input"
                  type="search"/></th>
@@ -32,13 +33,29 @@
     </thead>
     <tbody>
     <tr ng-repeat="item in smartTableData">
-      <td class="table-id">{{item.id}}</td>
-      <td>{{item.firstName}}</td>
-      <td>{{item.lastName}}</td>
-      <td>{{item.username}}</td>
-      <td><a class="email-link" ng-href="mailto:{{item.email}}">{{item.email}}</a></td>
-      <td>{{item.age}}</td>
+      <td class="table-id">{{ item.id }}</td>
+      <td>{{ item.firstName }}</td>
+      <td>{{ item.lastName }}</td>
+      <td>{{ item.username }}</td>
+      <td><a class="email-link" ng-href="mailto:{{ item.email }}">{{ item.email }}</a></td>
+      <td>{{ item.age }}</td>
+	</tr>
+<!--    <tr ng-repeat="item in smartTableData">
+      <td class="table-id">{{ item.id || showItemId() }}</td>
+      <td>{{ item.firstName || showfirstName() }}</td>
+      <td>{{ item.lastName || showlastName() }}</td>
+      <td>{{ item.username || showusername() }}</td>
+      <td><a class="email-link" ng-href="mailto:{{ item.email || showemail() }}">{{ item.email || showemail() }}</a></td>
+      <td>{{ item.age || showage() }}</td>
     </tr>
+    <tr ng-repeat="item in smartTableData">
+      <td class="table-id">{{ showItemId() }}</td>
+      <td>{{ showfirstName() }}</td>
+      <td>{{ showlastName() }}</td>
+      <td>{{ showusername() }}</td>
+      <td><a class="email-link" ng-href="mailto:{{ showemail() }}">{{ showemail() }}</a></td>
+      <td>{{ showage() }}</td>
+</tr> -->
     </tbody>
     <tfoot>
     <tr>

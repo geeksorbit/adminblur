@@ -1,0 +1,31 @@
+<div class="modal-content">
+	<div class="modal-header bg-success">
+		<span> Add User</span>
+	</div>
+	<div class="modal-body text-center">
+		<form class="form-signin" name="signinForm" role="form">
+			<div class="form-group" ng-class="{ 'has-error' : signinForm.name.$invalid }">
+				<label>Name</label>
+				<input type="text" name="name" class="form-control" ng-model="user.name" ng-minlength="2">
+				<p class="help-block" ng-show="signinForm.name.$error.minlength">Enter a valid Name.</p>
+			</div>
+			<div class="form-group" ng-class="{ 'has-error' : signinForm.email.$invalid }">
+				<label>Email</label>
+				<input type="email" name="email" class="form-control"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" ng-model="user.email">
+				<p class="help-block" ng-show="signinForm.email.$invalid">Enter a valid email.</p>
+			</div>
+			<div class="form-group" ng-class="{ 'has-error' : signinForm.password.$invalid }">
+				<label>Password</label>
+				<input type="password" name="password" class="form-control" ng-model="user.password" ng-minlength="4">
+				<p class="help-block" ng-show="signinForm.password.$error.minlength">Min password length is 4 characters.</p>
+			</div>
+			<!--    <label class="checkbox">
+				<a href="#/register"> Sign Up</a>
+				</label>	-->
+			<button ng-disabled="!user.email || !user.password" type="button" ng-click="addUserByEmail()" progress-button="progressFunction()" pb-style="shrink" class="btn btn-success">Add User</button>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-success" ng-click="$dismiss()">OK</button>
+	</div>
+</div>

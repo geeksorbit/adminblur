@@ -12,6 +12,7 @@
   function TablesPageCtrl($scope, $filter, editableOptions, editableThemes) {
 
     $scope.smartTablePageSize = 10;
+	$scope.smartTableData = [];
 
     $scope.smartTableData = [
       {
@@ -689,7 +690,6 @@
       return selected.length ? selected[0].text : 'Not set';
     };
 
-
     $scope.removeUser = function(index) {
       $scope.users.splice(index, 1);
     };
@@ -707,7 +707,6 @@
     editableOptions.theme = 'bs3';
     editableThemes['bs3'].submitTpl = '<button type="submit" class="btn btn-primary btn-with-icon"><i class="ion-checkmark-round"></i></button>';
     editableThemes['bs3'].cancelTpl = '<button type="button" ng-click="$form.$cancel()" class="btn btn-default btn-with-icon"><i class="ion-close-round"></i></button>';
-
 
   }
 

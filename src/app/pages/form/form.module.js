@@ -18,7 +18,7 @@
           title: 'Form Elements',
           sidebarMeta: {
             icon: 'ion-compose',
-            order: 250,
+            order: 2250,
           },
         })
         .state('form.inputs', {
@@ -34,7 +34,7 @@
           templateUrl: 'app/pages/form/layouts/layouts.html',
           title: 'Form Layouts',
           sidebarMeta: {
-            order: 100,
+            order: 110,
           },
         })
         .state('form.wizard',
