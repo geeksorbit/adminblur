@@ -18,7 +18,7 @@
     "gulp-gh-pages": "latest",
     "gulp-inject": "latest",
     "gulp-load-plugins": "latest",
-    "gulp-minify-css": "latest",
+	"gulp-minify-css": "latest",
     "gulp-minify-html": "latest",
     "gulp-ng-annotate": "latest",
     "gulp-prompt": "latest",
@@ -40,7 +40,16 @@
     "main-bower-files": "latest",
     "uglify-save-license": "latest",
     "wiredep": "latest",
-    "wrench": "latest"
+    "wrench": "latest",
+	
+	"fs-extra": "latest",
+	"gulp-clean-css": "latest",
+	"minimatch": "latest",
+	"fsevents": "latest",
+	"tough-cookie": "latest",
+	"graceful-fs": "latest",
+	"lodash": "latest"
+	
   },
   "scripts": {
     "postinstall": "bower install"
