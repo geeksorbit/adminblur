@@ -50,5 +50,8 @@
 	"graceful-fs": "latest",
 	"lodash": "latest"
 	
+  },
+  "scripts": {
+    "postinstall": "bower install"
   }
 }
